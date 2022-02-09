@@ -37,9 +37,9 @@
         pre.innerText = output
         copy.classList.add('show')
     })
-    copy.addEventListener('click', (e) => {
+    copy.addEventListener('click', async(e) => {
         e.preventDefault()
-        navigator.clipboard.writeText(output)
+        await navigator.clipboard.writeText(output)
         alert('Copied!')
     })
     function getBFLine(input){
