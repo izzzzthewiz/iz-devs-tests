@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plain text to Brainfuck</title>
+</head>
+<style>
+    button#copy{
+        display: none;
+    }
+    button#copy.show{
+        display: block;
+    }
+</style>
+<body>
+    <form>
+        <label for="input">Plain text input</label><br>
+        <input type="text" id="input" placeholder="Input" autocomplete="off"><br><br><br>
+        <button id="convert">Convert</button>
+    </form>
+    <br><br><br>
+    <button id="copy">Copy output</button>
+    <br>
+    <div id="output">
+        <pre></pre>
+    </div>
+</body>
+<script>
+    const convertBtn = document.getElementById('convert')
+    const input = document.getElementById('input')
+    const copy = document.getElementById('copy');
+    const pre = document.querySelector('#output pre')
+    let output
+    convertBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (input.value == '') return
+        output = `${getFullBFString(input.value)}`
+        pre.innerText = output
+        copy.classList.add('show')
+    })
+    copy.addEventListener('click', (e) => {
+        e.preventDefault()
+        navigator.clipboard.writeText(output)
+        alert('Copied!')
+    })
+    function getBFLine(input){
+        const ascii = parseInt(`${input}`.charCodeAt(0))
+        let num = 0
+        let string = ''
+        for (let i = 1; i <= ascii; i++){
+            string = string + '+'
+        }
+        return string + '.>\n'
+    }
+    function getFullBFString(input){
+        const inputObj = input.split('')
+        let fullString = ''
+        for (const char of inputObj){
+            fullString = fullString + getBFLine(char)
+        }
+        return fullString
+    }
+</script>
+</html>

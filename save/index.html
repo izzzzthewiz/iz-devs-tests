@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Save Name</title>
+</head>
+<body>
+    <form>
+        <label for="username">Username <span style="color: #f00;">*</span></label>
+        <br>
+        <input type="text" id="username" placeholder="Enter username" autocomplete="off"/>
+        <span for="username" style="color: #f00;"></span>
+        <br>
+        <button id="usernamebtn">Click to save</button>
+    </form>
+    <div id="usernamedisplay">
+        <pre></pre>
+    </div>
+    <br><br><br>
+    <form>
+        <label for="bgcolor">Background Color <span style="color: #f00;">*</span></label>
+        <br>
+        <input type="text" id="bgcolor" placeholder="Enter hex" autocomplete="off"/>
+        <span for="bgcolor" style="color: #f00;"></span>
+        <br>
+        <button id="bgcolorbtn">Click to save</button>
+    </form>
+    <div id="bgcolordisplay">
+        <pre></pre>
+    </div>
+    <br><br><br>
+    <form>
+        <label for="image">Image <span style="color: #f00;">*</span></label>
+        <br>
+        <input type="text" id="image" placeholder="Enter image URL" autocomplete="off"/>
+        <span for="image" style="color: #f00;"></span>
+        <br>
+        <button id="imagebtn">Click to save</button>
+    </form>
+    <div id="imagedisplay">
+        <pre></pre>
+    </div>
+    <script defer src="./js/main.js"></script>
+</body>
+</html>
