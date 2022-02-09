@@ -33,7 +33,7 @@
     convertBtn.addEventListener('click', (e) => {
         e.preventDefault()
         if (input.value == '') return
-        output = `${getFullBFString(input.value)}`
+        output = getFullBFString(input.value)
         pre.innerText = output
         copy.classList.add('show')
     })
