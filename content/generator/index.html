@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>videos.json Generator - USM Backend</title>
+    <link rel="icon" href="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    
+    <div class="formcontainer">
+        <form>
+
+            <h1 class="center">JSON Generator</h1>
+
+            <label for="title">Video Title<span>*</span></label>
+            <input type="text" id="title" placeholder="Video Title" autocomplete="off">
+
+            <label for="creator">Video Creator<span>*</span></label>
+            <input type="text" id="creator" placeholder="Video Creator" autocomplete="off">
+
+            <label for="url">Video URL<span>*</span></label>
+            <input type="text" id="url" placeholder="Video URL" autocomplete="off">
+
+            <button id="generate">Generate</button>
+    
+        </form>
+    </div>
+
+
+    <div class="output-outer">
+        <div class="output-inner">
+            
+            <div class="output-head">
+                <button id="copy">Copy</button>
+            </div>
+            
+            <div id="preview">
+                <pre></pre>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Viewer - Baseball Stats</title>
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="og:title" content="Stats Viewer - Baseball Stats">
+    <meta name="og:description" content="Edit your baseball stats and save them on your local storage.">
+</head>
+<body>
+
+    <div class="nav">
+        <img id="teamLogo">
+        <a href="./" class="active">Stats Viewer</a>
+        <a href="./edit/">Stats Editor</a>
+        <a href="./team/">Team Settings</a>
+        <a href="./export/" target="_blank">Export JSON</a>
+        <a href="./import/" target="_blank">Import JSON</a>
+    </div>
+
+    <div class="body">
+
+        <h1 id="playerName">Player Name</h1>
+        
+        <div class="imgcontainer">
+            <div class="img">
+                <img id="playerImage">
+            </div>
+        </div>
+        <h1 id="playerNumber">#1</h1>
+        <h3 id="team">Baseball Team</h1>
+
+        
+        <div class="statscontainer">
+            <h2>Stats</h2>
+            <div class="stats">
+
+                <ul>
+                    <li class="title">GP</li>
+                    <li id="gamesPlayed">0</li>
+                </ul>
+                <ul>
+                    <li class="title">AB</li>
+                    <li id="atBats">0</li>
+                </ul>
+                <ul>
+                    <li class="title">H</li>
+                    <li id="hits">0</li>
+                </ul>
+                <ul>
+                    <li class="title">2B</li>
+                    <li id="doubles">0</li>
+                </ul>
+                <ul>
+                    <li class="title">3B</li>
+                    <li id="triples">0</li>
+                </ul>
+
+                <ul>
+                    <li class="title">HR</li>
+                    <li id="homeRuns">0</li>
+                </ul>
+                <ul>
+                    <li class="title">BB</li>
+                    <li id="walks">0</li>
+                </ul>
+                <ul>
+                    <li class="title">SH</li>
+                    <li id="sacrifices">0</li>
+                </ul>
+                <ul>
+                    <li class="title">R</li>
+                    <li id="runs">0</li>
+                </ul>
+                <ul>
+                    <li class="title">RBI</li>
+                    <li id="runsBattedIn">0</li>
+                </ul>
+
+                <ul>
+                    <li class="title">S</li>
+                    <li id="steals">0</li>
+                </ul>
+                <ul>
+                    <li class="title">CS</li>
+                    <li id="caughtStealing">0</li>
+                </ul>
+                <ul>
+                    <li class="title">AVG</li>
+                    <li id="battingAverage">.000</li>
+                </ul>
+                <ul>
+                    <li class="title">OBP</li>
+                    <li id="onBase">.000</li>
+                </ul>
+                <ul>
+                    <li class="title">SLG</li>
+                    <li id="slugging">.000</li>
+                </ul>
+
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="./js/stats.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/viewer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Editor - Baseball Stats</title>
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="og:title" content="Team Editor - Baseball Sats">
+    <meta name="og:description" content="Edit your baseball stats and save them on your local storage.">
+</head>
+<body>
+
+    <div class="nav">
+        <img id="teamLogo">
+        <a href="../">Stats Viewer</a>
+        <a href="../edit/">Stats Editor</a>
+        <a href="./" class="active">Team Settings</a>
+        <a href="../export/" target="_blank">Export JSON</a>
+        <a href="../import/" target="_blank">Import JSON</a>
+    </div>
+
+    <div class="body">
+    
+        <h1>Team Editor</h1>
+
+        <div class="input-container">
+
+            <div class="grid-3">
+
+                <div class="grid-item-large">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" placeholder="Team Name" autocomplete="off">
+                </div>
+
+                <div class="grid-item-large">
+                    <label for="teamImg">Team Logo</label>
+                    <input type="text" id="teamImg" placeholder="Team Logo" autocomplete="off">
+                </div>
+
+                <div class="grid-item-large">
+                    <label for="teamColor">Team Color</label>
+                    <input type="text" id="teamColor" placeholder="Team Color" autocomplete="off">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="button-container">
+            <button id="save">Save</button>
+            <button id="reset">Reset</button>
+        </div>
+    
+    </div>
+
+    <div id="errorContainer">
+        <div class="errorBox">
+            <h3>Error</h3>
+            <p>The following inputs are invalid:</p>
+            <span id="empty"></span>
+            <div class="center">
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/stats.js"></script>
+    <script src="../js/team.js"></script>
+
+</body>
+</html>

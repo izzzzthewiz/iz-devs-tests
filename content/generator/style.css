@@ -1,0 +1,89 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    background-color: #779afc;
+}
+.formcontainer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 4vh;
+}
+form{
+    border: 2px solid #0040AE;
+    padding: 2vmin;
+    width: 50vw;
+    max-height: 50vh;
+    background-color: #d9e3ff;
+    border-radius: 10px;
+}
+form h1{
+    padding: 0 2vmin 2vmin 2vmin;
+    text-align: center;
+    font-size: 36px;
+}
+label span{
+    color: #d00;
+    padding-left: 4px
+}
+form input{
+    width: 47vw;
+    margin-bottom: 2vmin;
+    border: 2px solid #0040AE;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border-radius: 20px;
+}
+form input:focus{
+    outline: none;
+}
+
+button{
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border-radius: 20px;
+    border: 2px solid #0040AE;
+    background-color: #0040AE;
+    color: #fff;
+}
+button:hover{
+    cursor: pointer;
+    color: #d9e3ff;
+}
+
+.output-outer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+.output-inner{
+    border: 2px solid #0040AE;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0 2vmin 2vmin 2vmin;
+    width: 80vw;
+    max-height: 37vh;
+    overflow: scroll;
+}
+.output-head{
+    padding: 2vmin 0 0 0;
+    background-color: #fff;
+    height: 7vmin;
+    width: 80vw;
+    z-index: 1;
+    border-bottom: 2px solid #d9e3ff;
+    position: fixed;
+}
+button#copy{
+    position: fixed;
+}
+pre{
+    font-family: monospace;
+    margin-top: 12vh;
+    font-size: 12px;
+    width: 80vw;
+}

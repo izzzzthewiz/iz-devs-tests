@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Editor - Baseball Stats</title>
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="og:title" content="Stats Editor - Baseball Stats">
+    <meta name="og:description" content="Edit your baseball stats and save them on your local storage.">
+</head>
+<body>
+
+    <div class="nav">
+        <img id="teamLogo">
+        <a href="../">Stats Viewer</a>
+        <a href="./" class="active">Stats Editor</a>
+        <a href="../team/">Team Settings</a>
+        <a href="../export/" target="_blank">Export JSON</a>
+        <a href="../import/" target="_blank">Import JSON</a>
+    </div>
+
+    <div class="body">
+    
+        <h1>Stats Editor</h1>
+
+        <div class="input-container">
+
+            <div class="grid">
+
+                <div class="grid-item-large">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="First Name" autocomplete="off">
+                </div>
+        
+                <div class="grid-item-large">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last Name" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="number">Number</label>
+                    <input type="number" id="number" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item-large">
+                    <label for="img">Player Image</label>
+                    <input type="text" id="img" placeholder="URL" autocomplete="off">
+                </div>
+
+                <div class="grid-item">
+                    <label for="gamesPlayed">Games Played (GP)</label>
+                    <input type="number" id="gamesPlayed" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="atBats">At Bats (AB)</label>
+                    <input type="number" id="atBats" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="hits">Hits (H)</label>
+                    <input type="number" id="hits" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="doubles">Doubles (2B)</label>
+                    <input type="number" id="doubles" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="triples">Triples (3B)</label>
+                    <input type="number" id="triples" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="homeRuns">Home Runs (HR)</label>
+                    <input type="number" id="homeRuns" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="walks">Walks/Hit by Pitch (BB)</label>
+                    <input type="number" id="walks" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="sacrifices">Sacrifices (SH)</label>
+                    <input type="number" id="sacrifices" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="runs">Runs (R)</label>
+                    <input type="number" id="runs" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="runsBattedIn">Runs Batted In (RBI)</label>
+                    <input type="number" id="runsBattedIn" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="steals">Steals (S)</label>
+                    <input type="number" id="steals" placeholder="Number" autocomplete="off">
+                </div>
+        
+                <div class="grid-item">
+                    <label for="caughtStealing">Caught Stealing (CS)</label>
+                    <input type="number" id="caughtStealing" placeholder="Number" autocomplete="off">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="button-container">
+            <button id="save">Save</button>
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+
+    <div id="errorContainer">
+        <div class="errorBox">
+            <h3>Error</h3>
+            <p>The following inputs are invalid:</p>
+            <span id="empty"></span>
+            <div class="center">
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/stats.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/edit.js"></script>
+
+</body>
+</html>
