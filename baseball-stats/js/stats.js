@@ -5,7 +5,7 @@ function checkStats(reset){
     let obj = []
     var ls = {
         teamName: 'Baseball Team',
-        teamLogo: '../img/logo.png',
+        teamLogo: 'https://izzzzthewiz.github.io/iz-devs-tests/baseball-stats/img/logo.png',
         teamColor: '#1e90ff',
         firstName: 'Player',
         lastName: 'Name',
