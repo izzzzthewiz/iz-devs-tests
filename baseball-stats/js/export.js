@@ -8,9 +8,17 @@ function displayJSON(){
     const url = `${window.location}`
     const split = url.split('?json=')
     if (!split[1]) return document.querySelector('pre').innerText = JSON.stringify(stats, '\n', 2)
+    
     json = split[1].replaceAll('%22', '"')
     json = json.replaceAll('%23', '#')
+    json = json.replaceAll('%5B', '[')
+    json = json.replaceAll('%5D', ']')
+    json = json.replaceAll('%7B', '{')
+    json = json.replaceAll('%7D', '}')
+    json = json.replaceAll('%3A', ':')
+    json = json.replaceAll('%2C', ',')
     json = json.replaceAll('%20', ' ')
+
     json = JSON.parse(json)
     value = JSON.stringify(json, '\n', 2)
     document.querySelector('pre').innerText = value

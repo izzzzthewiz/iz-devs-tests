@@ -73,8 +73,16 @@
             var json = JSON.stringify(localStorage.getItem('stats'))
             json = json.replaceAll('"', '')
             json = json.replaceAll('\\', '"')
+
+            json = json.replaceAll('"', '%22')
             json = json.replaceAll('#', '%23')
-            console.log(json)
+            json = json.replaceAll('[', '%5B')
+            json = json.replaceAll(']', '%5D')
+            json = json.replaceAll('{', '%7B')
+            json = json.replaceAll('}', '%7D')
+            json = json.replaceAll(':', '%3A')
+            json = json.replaceAll(',', '%2C')
+
             document.getElementById('export').setAttribute('href', './export/?json=' + json)
         }
         loadExport()
