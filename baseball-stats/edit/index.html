@@ -17,7 +17,7 @@
         <a href="../">Stats Viewer</a>
         <a href="./" class="active">Stats Editor</a>
         <a href="../team/">Team Settings</a>
-        <a href="../export/" target="_blank">Export JSON</a>
+        <a id="export" target="_blank">Export JSON</a>
         <a href="../import/" target="_blank">Import JSON</a>
     </div>
 
@@ -133,6 +133,17 @@
     <script src="../js/stats.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/edit.js"></script>
+    <script>
+        function loadExport(){
+            var json = JSON.stringify(localStorage.getItem('stats'))
+            json = json.replaceAll('"', '')
+            json = json.replaceAll('\\', '"')
+            json = json.replaceAll('#', '%23')
+            console.log(json)
+            document.getElementById('export').setAttribute('href', '../export/?json=' + json)
+        }
+        loadExport()
+    </script>
 
 </body>
 </html>

@@ -1,10 +1,24 @@
 var stats = JSON.parse(localStorage.getItem('stats'))
+
 document.body.style.fontFamily = 'Arial, Helvetica, sans-serif'
 document.querySelector('span').style.color = '#0c0'
 document.querySelector('span').style.display = 'none'
-document.querySelector('pre').innerText = JSON.stringify(stats, '\n', 2)
+
+function displayJSON(){
+    const url = `${window.location}`
+    const split = url.split('?json=')
+    if (!split[1]) return document.querySelector('pre').innerText = JSON.stringify(stats, '\n', 2)
+    json = split[1].replaceAll('%22', '"')
+    json = json.replaceAll('%23', '#')
+    json = json.replaceAll('%20', ' ')
+    json = JSON.parse(json)
+    value = JSON.stringify(json, '\n', 2)
+    document.querySelector('pre').innerText = value
+}
+displayJSON()
+
 async function copy(){
-    navigator.clipboard.writeText(JSON.stringify(stats, '\n', 2))
+    navigator.clipboard.writeText(document.querySelector('pre').innerText)
     document.querySelector('span').style.display = 'inline'
     setTimeout(function(){
         document.querySelector('span').style.display = 'none'
