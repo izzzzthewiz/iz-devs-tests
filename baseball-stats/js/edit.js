@@ -78,7 +78,7 @@ document.getElementById('reset').addEventListener('click', function(){
     stats[0].triples = 0
     stats[0].homeRuns = 0
     stats[0].walks = 0
-    stats[0].walkssacrifices = 0
+    stats[0].sacrifices = 0
     stats[0].runs = 0
     stats[0].runsBattedIn = 0
     stats[0].steals = 0
