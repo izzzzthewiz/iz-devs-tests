@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --top: 100px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.on{
+    background-color: red !important;
+}
+.horizontal{
+    background-color: lightgray;
+    height: 10px;
+    width: 100px;
+}
+.vertical{
+    background-color: lightgray;
+    height: 100px;
+    width: 10px;
+}
+
+#a{
+    position: relative;
+    top: var(--top);
+}
+#b{
+    position: relative;
+    top: var(--top);
+    left: 100px;
+}
+#c{
+    position: relative;
+    left: 100px;
+    top: calc(var(--top) + 10px);
+}
+#d{
+    position: relative;
+    top: calc(var(--top) + 10px);
+}
+#e{
+    position: relative;
+    left: -10px;
+}
+#f{
+    position: relative;
+    top: calc(calc(-2*var(--top)) - 10px);
+    left: -10px;
+}
+#g{
+    position: relative;
+    top: calc(calc(-2*var(--top)) - 10px);
+}
