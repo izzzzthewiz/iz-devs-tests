@@ -1,7 +1,8 @@
 const LOCAL_STORAGE = 'timePunch'
 const DEFAULT_LS = {
   punchedIn: false,
-  punches: []
+  punches: [],
+  rate: 10
 }
 
 let editing = 0
@@ -54,6 +55,7 @@ window.addEventListener('load', () => {
   const punches = document.getElementById('punches')
   const hours = document.getElementById('hours')
   const pay = document.getElementById('pay')
+  const rate = document.getElementById('rate')
 
   setInterval(() => {
     // Time
@@ -110,7 +112,7 @@ window.addEventListener('load', () => {
     hours.innerText = `Total hours: ${getTotalHours()}`
 
     // Pay
-    pay.innerText = `$${(getTotalHours() * 10).toFixed(2)}`
+    pay.innerText = `$${(getTotalHours() * ls.rate).toFixed(2)}`
 
     // Edit
     document.querySelectorAll('[-data-edit]').forEach((punch) => {
@@ -216,6 +218,16 @@ window.addEventListener('load', () => {
   const closeModal = document.getElementById('closeModal')
   closeModal.addEventListener('click', () => {
     setEditing(-1)
+  })
+
+  // Rate
+  let ls = JSON.parse(localStorage.getItem(LOCAL_STORAGE))
+  rate.value = ls.rate
+
+  rate.addEventListener('change', (e) => {
+    let ls = JSON.parse(localStorage.getItem(LOCAL_STORAGE))
+    ls.rate = e.target.value
+    localStorage.setItem(LOCAL_STORAGE, JSON.stringify(ls))
   })
 
 })
