@@ -35,6 +35,9 @@
     --link-darker: #004e97;
 }
 
+/* Container */
+.container{margin: 0 1rem;}
+
 /* Flex */
 .d-flex{display: flex;}
 .flex-column{flex-direction: column;}
