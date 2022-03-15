@@ -103,7 +103,7 @@ window.addEventListener('load', () => {
           <div class="w-20 d-flex align-items-center">
             <p class="text-danger">Punch out</p>
           </div>
-          <div class="w-20 d-flex align-items-center">
+          <div class="w-20 d-flex align-items-center" style="margin-right: 0.5rem;">
             <p class="text-dark">Hours: ${getHours(ls.punches[num-1].time, punch.time).toFixed(2)}</p>
           </div>
           <div class="w-60 d-flex justify-content-end">
