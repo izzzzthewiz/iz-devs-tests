@@ -24,6 +24,10 @@ function getCurrentTime(){
   return `${hours}:${duoNum(now.getMinutes())}:${duoNum(now.getSeconds())} ${tod}`
 }
 
+function getHours(n1, n2){
+  return (n2-n1)/1000/60/60
+}
+
 function getTotalHours(){
   const ls = JSON.parse(localStorage.getItem(LOCAL_STORAGE))
   const punches = ls.punches
@@ -85,10 +89,10 @@ window.addEventListener('load', () => {
       const time = new Date(punch.time)
       if (punch.punchType === 'in') html.push(`
       <div class="d-flex outline-dark p-1" style="margin-top: 1px">
-        <div class="w-50">
+        <div class="w-40">
           <p class="text-success">Punch in</p>
         </div>
-        <div class="w-50 d-flex justify-content-end">
+        <div class="w-60 d-flex justify-content-end">
           <p class="text-info">${time.getMonth()+1}/${time.getDate()}/${time.getFullYear()} ${punch.timeDisplay}</p>
           <button class="btn-link" -data-edit punch="${num}" style="margin-left: 0.5rem">Edit</button>
         </div>
@@ -96,10 +100,13 @@ window.addEventListener('load', () => {
       `)
       if (punch.punchType === 'out') html.push(`
         <div class="d-flex outline-dark p-1" style="margin-top: 1px">
-          <div class="w-50">
+          <div class="w-20 d-flex align-items-center">
             <p class="text-danger">Punch out</p>
           </div>
-          <div class="w-50 d-flex justify-content-end">
+          <div class="w-20 d-flex align-items-center">
+            <p class="text-dark">Hours: ${getHours(ls.punches[num-1].time, punch.time).toFixed(2)}</p>
+          </div>
+          <div class="w-60 d-flex justify-content-end">
             <p class="text-info">${time.getMonth()+1}/${time.getDate()}/${time.getFullYear()} ${punch.timeDisplay}</p>
             <button class="btn-link" -data-edit punch="${num}" style="margin-left: 0.5rem">Edit</button>
           </div>
