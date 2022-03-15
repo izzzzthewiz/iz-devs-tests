@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Dimensions</title>
+</head>
+<body>
+    <script>
+        document.body.innerHTML = `
+            ${window.innerWidth}x${window.innerHeight}px
+        `
+        window.addEventListener('resize', () => {
+            document.body.innerHTML = `
+                ${window.innerWidth}x${window.innerHeight}px
+            `
+        })
+    </script>
+</body>
+</html>
