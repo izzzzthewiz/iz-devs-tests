@@ -106,7 +106,7 @@ window.addEventListener('load', () => {
           <div class="w-20 d-flex align-items-center" style="margin-right: 0.5rem;">
             <p class="text-dark">Hours: ${getHours(ls.punches[num-1].time, punch.time).toFixed(2)}</p>
           </div>
-          <div class="w-60 d-flex justify-content-end">
+          <div class="w-60 d-flex align-items-center justify-content-end">
             <p class="text-info">${time.getMonth()+1}/${time.getDate()}/${time.getFullYear()} ${punch.timeDisplay}</p>
             <button class="btn-link" -data-edit punch="${num}" style="margin-left: 0.5rem">Edit</button>
           </div>
